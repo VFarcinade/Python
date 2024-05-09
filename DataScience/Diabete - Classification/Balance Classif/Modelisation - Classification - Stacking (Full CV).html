@@ -15986,8 +15986,6 @@ Prop_test: [0.50144989 0.49855011]
                                             <span class="n">max_depth</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s2">"max_depth_rf"</span><span class="p">],</span>
                                             <span class="n">max_features</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s2">"max_features_rf"</span><span class="p">])</span>
 
-<span class="n">final_estimator</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s1">'l2'</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">'C_stack'</span><span class="p">])</span>
-
 <span class="n">clf_stack</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">'catboost'</span><span class="p">,</span> <span class="n">clf_catboost</span><span class="p">),</span>
                                            <span class="p">(</span><span class="s1">'random_forest'</span><span class="p">,</span> <span class="n">clf_randomforest</span><span class="p">),</span>
                                            <span class="p">(</span><span class="s1">'reg_logistic'</span><span class="p">,</span> <span class="n">clf_reglog</span><span class="p">)],</span>
